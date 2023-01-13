@@ -38,6 +38,7 @@ class HomeScreen extends StatelessWidget {
               // Listado Horizontal de peliculas.
               // Listado Horizontal de peliculas.
               // Listado Horizontal de peliculas.
+              //Nuevo Listado Horizontal de peliculas
               const SizedBox(height: 20,),
                     MovieSlider(
                       movies: moviesProvider.popularMovies,
