@@ -1,0 +1,20 @@
+void main ()
+{
+  
+  // colecion de datos que tiene algun tipo de dato en comun
+  
+  List <int> numeros = [1,2,3,4,5,6,7,8,9,10];
+  
+  numeros.add(12);
+  
+  
+  print(numeros);
+  
+  final masNumeros = List.generate(100, (int index) => index+50 ); // esto es para generar una lista
+                                                                   // para que que te arroje 100 digitos     
+                                                                   // y le puse el +50 para que comience desde
+                                                                   // el 50.
+                                                                   // List.generate == generar list
+                                                                   // despues les pasas los parametros  
+  print(masNumeros);
+}

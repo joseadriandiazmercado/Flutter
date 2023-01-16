@@ -1,0 +1,40 @@
+void main () {
+   
+  final perro = new Perro(); // instancia de la clase perro
+  final gato = new Gato(); //instancia de la clase gato 
+  
+  sonidoAnimal(perro);
+  sonidoAnimal(gato);
+}
+
+void sonidoAnimal( Animal animal  ) { //Esta funciona va a recibir un animal y "Animal" tiene emitirSonido
+  
+  animal.emitirSonido();
+  
+}
+
+
+
+abstract class Animal {  // cada palabra va capitalizada 
+  
+  int? patas;  
+  void emitirSonido();
+ }
+
+class Perro implements Animal{ // nueva clase perro, implements para la clase abstracta y como se llama
+  
+  int? patas;
+  
+  void emitirSonido(){
+    
+    print('guuuuuuff');
+  }
+}
+  class Gato implements Animal{ // el implements es para saber de donde lo tengo que implemtentar y el nombre
+                                // de la clase abstracta
+    int? patas;
+    void emitirSonido(){
+      
+      print('MIIIIIIIIIIIIAAAAAAAAUUUUUUUU');
+    }
+  }

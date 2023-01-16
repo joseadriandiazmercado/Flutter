@@ -1,0 +1,33 @@
+void main (){
+  
+ final nombre = 'ADRIAN';  definimos el valor de la variable
+  
+ saludar('$nombre  buenas noches');  mandamos a llamar la funcion con nombre por referencia
+ saludo(nombre nombre, mensaje  'SALUDOS' );  como los valores son requeridos, los llamo en la  funcion
+                                                nombre nombre que toma a ADRIAN
+                                                o lo puedo poner de igual manero nombre 'ADRIAN'
+                                                en la misma funcion saludo  
+                                               
+}
+
+void saludar(String nombre,[String mensaje = 'hi']){  creamos la funcion de saludar, va a retornar un valor 
+                                                      de String  
+                                             se coloca [Mensaje opcional] para poder mandar mensajes opcionales 
+                                             se coloca entre llavez
+                                            esto es por si no te manda un valor, que salga el mensaje opcional 
+  
+  print('$mensaje $nombre'); imprimor los valores de mensaje y nombre
+  
+}
+
+
+void saludo({ las llaves se deben de poner entre llaves para inializar que son requeridos.
+  
+required String nombre,  se coloca el required para pedir siempre que se quiera utlizar esta funcion
+required String mensaje, el los valores con requiered siempre deben de ser verdaderos.
+}){
+  print('$mensaje $nombre');
+  
+  
+}
+  

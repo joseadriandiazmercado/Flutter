@@ -1,0 +1,40 @@
+void main(){
+  //--------Creacion de Mapa---------//
+  final rawJson = {
+    'nombre': 'logan',
+    'poder': 'regeneracion'
+  };
+  
+  //final logan = new Heroe(nombre: rawJson['nombre']!, poder: rawJson['poder']!);
+  
+  final ironman = Heroe.fromJson(rawJson); //heroe(nombre de la clase) fromJson(nombre del constructor)
+  
+  print(ironman);
+  
+  // final ironman = new Heroe(nombre:'Tony', poder:'Genio, filantropo, millonario,playbopy'); 
+  //print(ironman);
+  
+}
+
+class Heroe{
+  //--------------Atributos---------------//
+  String nombre; //? para mencionar que puede ser nulo la varieble y no siempre espere lo que es una respuesta
+  String poder;
+  
+  Heroe({
+    required this.nombre, // forma corta de inicializar, recibir el argumento y asignarlo a la propiedad
+    required this.poder   // las {} simbolizan que son argunmentos por nombre  
+         });
+//----------constructor ------------//
+  Heroe.fromJson( Map<String, String> json ):    // : indicar lo que se quiere ejecutar al momento de que se este creando la instancia-
+    this.nombre = json['nombre']!,               // de la clase
+    this.poder = json['poder'] ?? 'se quedo sin adamantium'; // ??  es para proteger sin en dado caso no se entregar nada
+                                                             // ! sirve para decirle a dart que TU estas 100% seguro de tener los argumentos
+                                                             // La palabra from es comun cuando vamos a recibir un Map o json 
+  
+  @override //sobre escribir opcional
+  String toString(){
+    return 'Heroe: nombre: ${this.nombre}, poder: ${this.poder}'; // fuincion queme debe de regresar ese String
+                                                                 // this hace referencia a la instancia de la clase
+  }
+}

@@ -1,0 +1,33 @@
+void main(){
+  
+  final ironman = new Heroe(nombre:'Tony', poder:'Genio, filantropo, millonario,playbopy'); 
+  // final"tipo de dato" new para la definicion de la clase
+  
+ // ironman.nombre='Tony';
+ // ironman.poder='Genio,millorario,playboy';
+  
+  print(ironman);
+  
+}
+
+class Heroe{
+  
+  String nombre; //? para mencionar que puede ser nulo la varieble y no siempre espere lo que es una respuesta
+  String poder;
+  
+  Heroe({
+    required this.nombre, // forma corta de inicializar, recibir el argumento y asignarlo a la propiedad
+    required this.poder   // las {} simbolizan que son argunmentos por nombre  
+         });
+  
+  //Hereo(String pNombre){
+  //return nombre = pNombre;    Esto no se debe de hacer 
+  //}
+  
+  @override //sobre escribir opcional
+  String toString(){
+    
+    return 'Heroe: nombre: ${this.nombre}, poder: ${this.poder}'; // fuincion queme debe de regresar ese String
+                                                                 // this hace referencia a la instancia de la clase
+  }
+}

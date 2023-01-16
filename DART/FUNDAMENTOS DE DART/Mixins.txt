@@ -1,0 +1,64 @@
+// Mixins
+// añadir ciertas funcionalidades especificas a una instancia de una clase
+// no es mas que nosotros ya tengamos una clase y le añadamos carac. que ya estan implementadas a nuestra clase
+void main (){
+  
+  print("------------------SOY UN DELFIN Y-----------------------");
+  final flipper = new Delfin();
+  flipper.nadar();
+  print("--------------------SOY BATMAN Y ---------------------");
+  final batman = new Murcielago(); // esto es de la clase murciela     
+                                    // con el mixins de Volador y Caminante, 
+                                    // Y que se extends de la clase Mamifero
+  batman.caminar(); //Son las intancia que si posee la clase murcielago
+  batman.volar(); //Son las intancia que si posee la clase murcielago
+  
+  print("---------------Soy un pato y--------------------------");
+  final duck = new Pato();
+  
+  duck.caminar();
+  duck.nadar();
+  duck.volar();  
+  
+  print("---------------Soy una paloma y--------------------------");
+  final paloma = new Palomar();
+  paloma.caminar();
+  paloma.volar();
+}
+
+
+
+abstract class Animal{}
+abstract class Mamifero extends Animal{}
+abstract class Ave extends Animal{}
+abstract class Pez extends Animal{}
+
+
+abstract class Volador{
+  
+  void volar(){
+    print('Puedo Volar');
+  } 
+}
+abstract class Caminante{
+  
+  void caminar () => print('Puedo Caminar');
+}
+abstract class Nadador{
+  
+  void nadar () => print('Puedo Nadar');
+}
+
+
+class Delfin extends Mamifero with Nadador{  // Aqui la palabra reservada es with que es propio de Mixins
+  
+}
+
+class Murcielago extends Mamifero with Volador,Caminante{ // Aqui la palabra reservada es with que es propio de Mixins
+}
+
+class Pato extends Mamifero with Volador,Caminante,Nadador{ // Aqui la palabra reservada es with que es propio de Mixins
+}
+class Palomar extends Ave with Volador, Caminante{
+  
+}

@@ -1,0 +1,11 @@
+Ctrl+Shitf+P
+
+flutter
+
+aplication
+
+//
+
+flutter select device
+
+(escoger nuestro despositivo emulando)

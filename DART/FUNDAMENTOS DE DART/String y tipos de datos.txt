@@ -1,0 +1,19 @@
+void main () {
+  
+  //String
+  final String nombre = 'ADRIAN';
+  String apellido = 'DIAZ';
+  
+  // las variables se leen con un "$" 
+  
+   // print('$nombre $apellido');
+  
+  // Numeros
+  
+  int vacas = 10;
+  double comida = 90.5;
+  
+  print('$nombre $apellido tiene $vacas vacas que comen $comida kg por dia');
+  print(vacas);
+  
+}

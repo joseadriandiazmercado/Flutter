@@ -1,0 +1,35 @@
+void main (){
+  
+  
+  bool activated = true;
+  
+  if(!activated){
+    
+   print('esta activado');
+  }
+  else {
+    print('No esta activado');
+    
+  }
+  
+}
+
+
+
+
+void main (){
+  
+  // "?" se pone para poder verificar si el Tipo bool puede terner valores null
+  
+  bool? activated = null;
+  
+  if(activated != null) {
+    
+   print('TU RESPUESTA ES NULL');
+  }
+  else {
+    print('TU RESPUESTA ES CORRECTA');
+    
+  }
+  
+}
