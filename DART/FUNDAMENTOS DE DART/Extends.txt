@@ -1,0 +1,40 @@
+// extends es para extender las clases
+void main(){
+ 
+  final superman = Heroe ('clark Kent', 'volar'); //se crea el objeto nuevo 
+  final deathpool = Villano ('BRUNCE LEE','karate'); // creacion de un nuevo objeto
+  
+  print(superman);
+  print(superman.valentia);
+  print(deathpool.maldad);
+}
+
+abstract class Personaje{
+  
+  String nombre; // esto si es requerido
+  String? poder; // esto para ponerno opcinal; 
+  
+  Personaje( this.nombre,
+            this.poder
+           ); // constructor
+  
+  @override
+  String toString(){
+    return '$nombre - $poder';
+    
+  }
+}
+
+class Heroe extends Personaje{
+  int valentia = 100;
+  
+  Heroe(String nombre, poder): super(nombre,poder);  //constructor, lo que hace super es apuntar al constructor "Personaje"
+  
+}
+
+class Villano extends Personaje {
+  
+  int maldad = 50;
+  
+  Villano(String nombre,poder): super(nombre,poder);
+}

@@ -1,0 +1,43 @@
+import 'dart:math' as math; // importacion de las librerias en dart, as es como alias, math es el alias y se debe de poner antes-
+                    // para saber que viene de esa libreria,
+
+void main (){
+  
+  //-------Nueva instancia del cuadrado-------//
+  
+    final cuadrado = new Cuadrado(1);
+  //------------------------------------//
+  cuadrado.area= 1000;
+  print('area: ${cuadrado.calculaArea()}');
+  print('lado: ${cuadrado.lado}');
+  print('area get ${cuadrado.area}');
+  
+}
+
+//---------Creacion de la clase----------//
+class Cuadrado{
+  //--------Propiedadesd-------///
+  double lado;
+ 
+  //---getter---// metodo, se me como metodo, pero se llama como propiedad
+  double get area{
+    return this.lado * this.lado;
+  }
+  //---setter-----//
+  
+  set area(double valor){ //(tipo de dato que voy a recibir ), sirve para no mandar argumentos entre los parentesis.
+    this.lado = math.sqrt(valor);
+  }
+  
+  
+  //----Constructor------//
+  Cuadrado( double lado):
+    this.lado = lado;
+  
+  double calculaArea(){
+    return this.lado * this.lado;
+    
+  }
+  
+  
+}

@@ -1,0 +1,32 @@
+// funciona igual que el Future
+// son asincornas
+
+void main()  async {  // convertimos el void main en async para que me permita utilizar le await
+  
+  print("antes de la peticion");
+    
+  
+  final data = await atrasado('Informacion cualquiera'); //el await funciona como Futere de igualmanera.
+   
+  print(data);
+  final nombre = await getNombre('10'); // The await expression can only be used in an async function.
+  print(nombre);
+  // getNombre('10').then(print);
+  
+  
+  print("Fin del programa");
+  
+  
+}
+
+Future<String> getNombre(String id) async { //si pongo la palabra async dice que la funcion ahora regresa un Future
+ return '$id - Adrian';
+}
+
+
+Future<String> atrasado(String url){ //Esto se ejecutara en un hilo diferente
+  return Future.delayed(
+  Duration(seconds:3),
+  () => 'Hola mundo - 3 segundos despues');
+  
+}

@@ -1,0 +1,26 @@
+// Futures
+// tarea asíncrona
+// => si no tienes ningun cuerpo de la funcion, significa que eso es lo que esta regresando, ejemplo abajo
+// () => 'hola mundo - 3 segundo despues'
+
+void main()   { 
+  
+  print("antes de la peticion");
+  
+  atrasado('Informacion cualquiera') 
+    .then((hola){
+      print(hola.toUpperCase());
+    });
+         
+  
+  print("Fin del programa");
+  
+  
+}
+
+Future<String> atrasado(String url){ //Esto se ejecutara en un hilo diferente
+  return Future.delayed(
+  Duration(seconds:3),
+  () => 'Hola mundo - 3 segundos despues');
+  
+}
